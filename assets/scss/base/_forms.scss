@@ -60,14 +60,16 @@ input[type="search"] {
   @include appearance(none);
 }
 
-input[type="checkbox"], input[type="radio"] {
-  display: inline;
-  margin-right: $base-line-height / 4;
-}
-
 input[type="file"] {
   margin-bottom: $base-line-height / 2;
   padding-bottom: ($base-line-height / 3);
+  width: 100%;
+}
+
+input[type=submit]{
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
   width: 100%;
 }
 
@@ -75,4 +77,76 @@ select {
   width: auto;
   max-width: 100%;
   margin-bottom: $base-line-height;
+}
+
+
+
+
+input[type=radio],
+input[type=checkbox] {
+  display: none;
+}
+
+.checkbox, .radio{
+
+  label{
+    background: $white;
+    border: 1px solid $light-gray;
+    border-radius: 3px;
+    line-height: 1;
+    padding: 10px 20px;
+    position: relative;
+
+    &:hover{
+      border-color:$medium-gray;
+      cursor: pointer;
+    }
+
+    &:before {
+      color: $white;
+      content: "\00a0";
+      display: inline-block;
+      line-height: 1;
+
+      width: 16px;
+      height: 16px;
+      text-align: center;
+
+      margin-right: 10px;
+      background-color: #aaa;
+      box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    }
+
+    @include media($medium-screen-up) {
+      display: inline-block;
+      margin:0 0.5em 0.5em 0;
+      min-width: 120px;
+    }
+  }
+
+  &.full label{
+    display:block !important;
+  }
+
+  input[type=radio]:checked + label, input[type=checkbox]:checked + label{
+    border-color: $orange;
+  }
+
+  input[type=radio]:checked + label:before {
+    background: $orange;
+    content: "\2022";
+  }
+
+  input[type=checkbox]:checked + label:before {
+    background: $orange;
+    content: "\2713";
+  }
+}
+
+.radio label:before {
+  border-radius: 8px;
+}
+.checkbox label:before {
+  border-radius: 3px;
 }

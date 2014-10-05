@@ -1,0 +1,16 @@
+body{
+  border-top: 3px solid $orange;
+}
+
+.main{
+  padding: 30px;
+
+  @include media($large-screen-up) {
+    margin: 0 auto;
+    width: $large-screen;
+  }
+}
+
+div.toggle-hide{
+  display: none;
+}
