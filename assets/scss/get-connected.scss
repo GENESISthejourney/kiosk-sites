@@ -1,0 +1,64 @@
+@import 'vendor/bourbon/bourbon';
+@import 'vendor/neat/neat';
+@import 'base/grid-settings';
+@import 'base/variables';
+
+form{
+
+  .first-name{
+    @include media($medium-screen-up) {
+      float:left;
+      width:48%;
+    }
+  }
+
+  .last-name{
+    @include media($medium-screen-up) {
+      float:right;
+      width:48%;
+    }
+  }
+
+  .email{
+    @include media($medium-screen-up) {
+      clear:both;
+      float:left;
+      width:48%;
+    }
+  }
+
+  .phone{
+    @include media($medium-screen-up) {
+      float:right;
+      width:48%;
+    }
+  }
+
+  .city{
+    @include media($medium-screen-up) {
+      float:left;
+      width:65%;
+    }
+  }
+
+  .state{
+    @include media($medium-screen-up) {
+      float:left;
+      margin-left:4%;
+      width:16%;
+    }
+  }
+
+  .zip-code{
+    @include media($medium-screen-up) {
+      float:right;
+      width:11%;
+    }
+  }
+
+  .age-group{
+    @include media($medium-screen-up) {
+      clear:both;
+    }
+  }
+}
