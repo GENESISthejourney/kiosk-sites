@@ -45,14 +45,14 @@ form{
     @include media($medium-screen-up) {
       float:left;
       margin-left:4%;
-      width:16%;
+      width:14%;
     }
   }
 
   .zip-code{
     @include media($medium-screen-up) {
       float:right;
-      width:11%;
+      width:13%;
     }
   }
 
